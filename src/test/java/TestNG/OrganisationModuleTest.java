@@ -18,7 +18,7 @@ import vtigerUtilPack.JavaUtility;
 import vtigerUtilPack.PropertyFileUtility;
 import vtigerUtilPack.WebDriverUtility;
 
-public class OrganisationModuleTest extends BaseClass{
+public class OrganisationModuleTest extends BaseClassParallelBrowser{
 
 	@Test(groups="SmokeTest")
 	public void createOrganisation() throws Throwable
