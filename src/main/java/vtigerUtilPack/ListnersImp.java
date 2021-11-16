@@ -25,7 +25,7 @@ public class ListnersImp implements ITestListener{
 
 	public void onTestFailure(ITestResult result) {
 		
-		EventFiringWebDriver efwd = new EventFiringWebDriver(BaseClass.sdriver);
+		EventFiringWebDriver efwd = new EventFiringWebDriver(BaseClass.driver);
 		String FailTestCase = result.getMethod().getMethodName();
 		String dateTime = new Date().toString().replace(" ", "_").replace(":","_");
 		

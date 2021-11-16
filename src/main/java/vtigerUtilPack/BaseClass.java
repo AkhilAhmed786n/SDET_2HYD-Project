@@ -2,92 +2,79 @@ package vtigerUtilPack;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
-
-import com.vtiger.ObjectRepository.Login;
+import org.testng.annotations.Parameters;
 
 public class BaseClass {
+	
+	public static WebDriver driver;
 
-	public WebDriver driver;
-	public static WebDriver sdriver;
-	public WebDriverUtility wUtil = new WebDriverUtility();
-	public ExcelUtility eu = new ExcelUtility();
-	public PropertyFileUtility pUtil = new PropertyFileUtility();
-
+	public PropertyFileUtility pfu = new PropertyFileUtility();
+	public WebDriverUtility wdu = new WebDriverUtility();
+	public ExcelUtility eu=new ExcelUtility();
+//	public static WebDriver sdriver;
+	
 	@BeforeSuite(groups={"SmokeTest","RegressionTest","SanityTest"})
-	public void connectDB() {
-		Reporter.log("Connect the Database", true);
+	public void connectDB()
+	{
+		System.out.println("Connect to Database");
 	}
-
-//	@Parameters("BROWSER")
+	
 	@BeforeClass(groups={"SmokeTest","RegressionTest","SanityTest"})
-	public void openBrowser() throws Throwable {
-		Reporter.log("Open the Browser", true);
-
-		String BROWSER = pUtil.propertyfileutility("browser");
-
-		if (BROWSER.equalsIgnoreCase("chrome")) {
-			System.setProperty(IPathConstant.ChromeKey, IPathConstant.ChromePath);
-			driver = new ChromeDriver();
-		} else if (BROWSER.equalsIgnoreCase("firefox")) {
-			System.setProperty(IPathConstant.GeckoKey, IPathConstant.GeckoPath);
-			driver = new FirefoxDriver();
-		} else {
-			Reporter.log("Please Enter Proper Browser Name", true);
-		}
+	public void openBrowser() throws Throwable
+	{
+		System.setProperty("webdriver.chrome.driver", "./drivers/chromeDriver.exe");
+		
+		driver= new ChromeDriver();	
+		
+		String URL = pfu.propertyfileutility("url");
+		driver.get(URL);
+//		sdriver=driver;
 	}
-
+	
 	@BeforeMethod(groups={"SmokeTest","RegressionTest","SanityTest"})
-	public void login() throws Throwable {
-		Reporter.log("Login to Application", true);
-
-		driver.get(pUtil.propertyfileutility("url"));
-		Thread.sleep(3000);
-//		driver.findElement(By.xpath("//input[@name=\"user_name\"]")).sendKeys(pUtil.propertyFileUtility("username"));
-//		driver.findElement(By.xpath("//input[@name=\"user_password\"]"))
-//				.sendKeys(pUtil.propertyFileUtility("password"));
-//		Thread.sleep(3000);
-//		driver.findElement(By.xpath("//input[@id=\"submitButton\"]")).click();
-//		Thread.sleep(3000);
-		Login l = new Login(driver);
-		l.loginIntoVtiger(pUtil.propertyfileutility("username"), pUtil.propertyfileutility("password"));
-
-		wUtil.waitForPageLoad(driver);
+	public void login() throws Throwable
+	{
+		String UN = pfu.propertyfileutility("username");
+		String PWD = pfu.propertyfileutility("password");
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("//input[@name=\"user_name\"]")).sendKeys(UN);
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("//input[@name=\"user_password\"]")).sendKeys(PWD);
+		Thread.sleep(1000);
+		driver.findElement(By.xpath("//input[@id=\"submitButton\"]")).click();
+		Thread.sleep(1000);
+		wdu.waitForPageLoad(driver);
 	}
-
+	
 	@AfterMethod(groups={"SmokeTest","RegressionTest","SanityTest"})
-	public void logout() throws Throwable {
-		Reporter.log("Logout from Application", true);
-
-		Thread.sleep(4000);
-		wUtil.mouseOver(driver, driver.findElement(By.xpath("//img[@src=\"themes/softed/images/user.PNG\"]")));
+	public void logout() throws Throwable
+	{
+		Thread.sleep(3000);
+		WebElement logout = driver.findElement(By.xpath("//img[@src=\"themes/softed/images/user.PNG\"]"));
+		wdu.mouseOver(driver, logout);
 		driver.findElement(By.xpath("//a[text()='Sign Out']")).click();
-
-//		HomePage hp = new HomePage(driver);
-//		
-//		hp.signOutFromVtiger();
-
 	}
-
 	@AfterClass(groups={"SmokeTest","RegressionTest","SanityTest"})
-	public void closeBrowser() throws InterruptedException {
-		Reporter.log("Close the Browser", true);
-
-		Thread.sleep(4000);
+	public void closeBrowser() throws Throwable
+	{
+		Thread.sleep(2000);
 		driver.close();
 	}
-
+	
 	@AfterSuite(groups={"SmokeTest","RegressionTest","SanityTest"})
-	public void disconnectDB() {
-		Reporter.log("DisConnect the Database", true);
-
+	public void disconnectDB()
+	{
+		System.out.println("Disconnect to Database");
 	}
+	
+
 }
