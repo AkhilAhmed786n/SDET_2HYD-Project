@@ -32,6 +32,7 @@ public class OrganisationModuleTest extends BaseClass{
 				+ "tbody[1]/tr[1]/td[1]/table[1]/tbody[1]/tr[2]/td[1]/table[1]/tbody[1]/tr[1]/td[1]/div[1]/input[1]")).click();
 //		driver.switchTo().alert().accept();
 		System.out.println("Created Organisation successfully");
+		System.out.println("hero");
 		
 	}
 
