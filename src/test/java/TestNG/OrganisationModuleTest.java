@@ -55,7 +55,7 @@ public class OrganisationModuleTest extends BaseClassParallelBrowser{
 		
 	}
 
-	@Test(groups="SmokeTest")
+	@Test(groups="RegressionTest")
 	public void createContact() throws Throwable 
 	{
 		

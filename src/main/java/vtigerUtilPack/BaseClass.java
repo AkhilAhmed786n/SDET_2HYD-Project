@@ -28,14 +28,14 @@ public class BaseClass {
 		System.out.println("Connect to Database");
 	}
 	
-	@BeforeClass
+	@BeforeClass(groups={"SmokeTest","RegressionTest","SanityTest"})
 	public void openBrowser() throws Throwable
 	{
 		System.setProperty("webdriver.chrome.driver", "./drivers/chromeDriver.exe");
 		
 		driver= new ChromeDriver();	
 		
-		String URL = pfu.propertyfileutility("amazonurl");
+		String URL = pfu.propertyfileutility("url");
 		driver.get(URL);
 //		sdriver=driver;
 	}

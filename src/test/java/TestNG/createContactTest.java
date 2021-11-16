@@ -14,7 +14,7 @@ import vtigerUtilPack.BaseClass;
 import vtigerUtilPack.PropertyFileUtility;
 import vtigerUtilPack.WebDriverUtility;
 
-public class createContact extends BaseClass {
+public class createContactTest extends BaseClass {
 
 	@Test
 	public void CreateContact() throws Throwable

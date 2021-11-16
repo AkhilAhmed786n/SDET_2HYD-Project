@@ -22,52 +22,52 @@ public class VtigerTableHandle {
 		driver.findElement(By.id("submitButton")).click();
 
 		driver.findElement(By.xpath("//a[text()='Organizations']")).click();
-
-		//		List<WebElement> OrgNames = driver.findElements(By.xpath("//table[@class='lvt small']//tr[*]//td[3]"));
-		//		
-
-		//		for (int i = 1; i <OrgNames.size(); i++)
-		//		{
-		//			System.out.println(OrgNames.get(i).getText());
-		//		}
-
-		//		for (WebElement webElement : OrgNames) 
-		//		{
-		//			System.out.println(webElement.getText());
-		//		}
-		List<WebElement> allCheckBox = driver.findElements(By.xpath("//table[@class='lvt small']//tr[*]//td[1]"));
-
-		List<WebElement> allOrgName = driver.findElements(By.xpath("//table[@class=\"lvt small\"]//tr[*]//td[3]//a[@title=\"Organizations\"]"));
-
-
-		String originalText = driver.findElement(By.xpath("//a[text()='sadiq1']")).getText();
-
-		for(WebElement oneOrgName : allOrgName)
-		{
-			String oneText = oneOrgName.getText();
-			System.out.println(oneText);
-			if(oneText.equalsIgnoreCase(originalText))
-			{
-				Thread.sleep(3000);
-				driver.findElement(By.xpath("//a[text()='"+originalText+"']/ancestor::tr[@class='lvtColData']//input[@type='checkbox']")).click();
-				break;
-			}
-
-			//	System.out.println(oneOrgName.getText());
-
-		}
-
-		//		for(int i=1; i<allOrgName.size(); i++)
-		//		{
-		//			System.out.println(allOrgName.get(i).getText());
-		//		}
-
-
-
-		//	}
-		//}
-
-		//		
-		//		
+//
+//		//		List<WebElement> OrgNames = driver.findElements(By.xpath("//table[@class='lvt small']//tr[*]//td[3]"));
+//		//		
+//
+//		//		for (int i = 1; i <OrgNames.size(); i++)
+//		//		{
+//		//			System.out.println(OrgNames.get(i).getText());
+//		//		}
+//
+//		//		for (WebElement webElement : OrgNames) 
+//		//		{
+//		//			System.out.println(webElement.getText());
+//		//		}
+//		List<WebElement> allCheckBox = driver.findElements(By.xpath("//table[@class='lvt small']//tr[*]//td[1]"));
+//
+//		List<WebElement> allOrgName = driver.findElements(By.xpath("//table[@class=\"lvt small\"]//tr[*]//td[3]//a[@title=\"Organizations\"]"));
+//
+//
+//		String originalText = driver.findElement(By.xpath("//a[text()='sadiq1']")).getText();
+//
+//		for(WebElement oneOrgName : allOrgName)
+//		{
+//			String oneText = oneOrgName.getText();
+//			System.out.println(oneText);
+//			if(oneText.equalsIgnoreCase(originalText))
+//			{
+//				Thread.sleep(3000);
+//				driver.findElement(By.xpath("//a[text()='"+originalText+"']/ancestor::tr[@class='lvtColData']//input[@type='checkbox']")).click();
+//				break;
+//			}
+//
+//			//	System.out.println(oneOrgName.getText());
+//
+//		}
+//
+//		//		for(int i=1; i<allOrgName.size(); i++)
+//		//		{
+//		//			System.out.println(allOrgName.get(i).getText());
+//		//		}
+//
+//
+//
+//		//	}
+//		//}
+//		
+		System.out.println(driver.findElement(By.xpath("")).getAttribute("title"));
+	
 	}
 }
