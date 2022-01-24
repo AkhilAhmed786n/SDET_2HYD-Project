@@ -22,13 +22,13 @@ public class BaseClassNew {
 	public ExcelUtility eu = new ExcelUtility();
 	public PropertyFileUtility pUtil = new PropertyFileUtility();
 
-	@BeforeSuite(groups={"SmokeTest","RegressionTest","SanityTest"})
+	@BeforeSuite(groups = { "SmokeTest", "RegressionTest", "SanityTest" })
 	public void connectDB() {
 		Reporter.log("Connect the Database", true);
 	}
 
 //	@Parameters("BROWSER")
-	@BeforeClass(groups={"SmokeTest","RegressionTest","SanityTest"})
+	@BeforeClass(groups = { "SmokeTest", "RegressionTest", "SanityTest" })
 	public void openBrowser() throws Throwable {
 		Reporter.log("Open the Browser", true);
 
@@ -45,7 +45,7 @@ public class BaseClassNew {
 		}
 	}
 
-	@BeforeMethod(groups={"SmokeTest","RegressionTest","SanityTest"})
+	@BeforeMethod(groups = { "SmokeTest", "RegressionTest", "SanityTest" })
 	public void login() throws Throwable {
 		Reporter.log("Login to Application", true);
 
@@ -63,7 +63,7 @@ public class BaseClassNew {
 		wUtil.waitForPageLoad(driver);
 	}
 
-	@AfterMethod(groups={"SmokeTest","RegressionTest","SanityTest"})
+	@AfterMethod(groups = { "SmokeTest", "RegressionTest", "SanityTest" })
 	public void logout() throws Throwable {
 		Reporter.log("Logout from Application", true);
 
@@ -77,7 +77,7 @@ public class BaseClassNew {
 
 	}
 
-	@AfterClass(groups={"SmokeTest","RegressionTest","SanityTest"})
+	@AfterClass(groups = { "SmokeTest", "RegressionTest", "SanityTest" })
 	public void closeBrowser() throws InterruptedException {
 		Reporter.log("Close the Browser", true);
 
@@ -85,7 +85,7 @@ public class BaseClassNew {
 		driver.close();
 	}
 
-	@AfterSuite(groups={"SmokeTest","RegressionTest","SanityTest"})
+	@AfterSuite(groups = { "SmokeTest", "RegressionTest", "SanityTest" })
 	public void disconnectDB() {
 		Reporter.log("DisConnect the Database", true);
 

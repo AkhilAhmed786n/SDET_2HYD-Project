@@ -3,17 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="TestNG.OrganisationModuleTest">
+      <class name="log4j.LoginTestLOG">
         <methods>
-          <include name="createOrganisation"/>
-          <include name="connectDB"/>
+          <include name="loginTestlog"/>
+          <include name="disconnectDB"/>
           <include name="logout"/>
           <include name="closeBrowser"/>
-          <include name="disconnectDB"/>
-          <include name="login"/>
+          <include name="connectDB"/>
           <include name="openBrowser"/>
+          <include name="login"/>
         </methods>
-      </class> <!-- TestNG.OrganisationModuleTest -->
+      </class> <!-- log4j.LoginTestLOG -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

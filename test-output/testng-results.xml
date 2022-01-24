@@ -2,40 +2,16 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-11-15T17:20:06 IST" name="Default suite" finished-at="2021-11-15T17:20:34 IST" duration-ms="27861">
+  <suite started-at="2022-01-03T16:00:32 IST" name="Default suite" finished-at="2022-01-03T16:00:32 IST" duration-ms="62">
     <groups>
     </groups>
-    <test started-at="2021-11-15T17:20:06 IST" name="Default test" finished-at="2021-11-15T17:20:34 IST" duration-ms="27861">
-      <class name="CreateOpportunitywithSalesStageId.CreateOpportunitywithSalesStageClosedWonTest">
-        <test-method is-config="true" signature="connectDB()[pri:0, instance:CreateOpportunitywithSalesStageId.CreateOpportunitywithSalesStageClosedWonTest@76c3e77a]" started-at="2021-11-15T17:20:06 IST" name="connectDB" finished-at="2021-11-15T17:20:06 IST" duration-ms="8" status="PASS">
+    <test started-at="2022-01-03T16:00:32 IST" name="Default test" finished-at="2022-01-03T16:00:32 IST" duration-ms="62">
+      <class name="akhilPack.AlphaNumeric_NumAddition">
+        <test-method signature="alphaNumericAddition()[pri:0, instance:akhilPack.AlphaNumeric_NumAddition@44821a96]" started-at="2022-01-03T16:00:32 IST" name="alphaNumericAddition" finished-at="2022-01-03T16:00:32 IST" duration-ms="12" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- connectDB -->
-        <test-method is-config="true" signature="openBrowser()[pri:0, instance:CreateOpportunitywithSalesStageId.CreateOpportunitywithSalesStageClosedWonTest@76c3e77a]" started-at="2021-11-15T17:20:06 IST" name="openBrowser" finished-at="2021-11-15T17:20:11 IST" duration-ms="4825" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openBrowser -->
-        <test-method is-config="true" signature="login()[pri:0, instance:CreateOpportunitywithSalesStageId.CreateOpportunitywithSalesStageClosedWonTest@76c3e77a]" started-at="2021-11-15T17:20:11 IST" name="login" finished-at="2021-11-15T17:20:18 IST" duration-ms="7145" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method signature="createOppurtunityWithSalesStageCloseWon()[pri:0, instance:CreateOpportunitywithSalesStageId.CreateOpportunitywithSalesStageClosedWonTest@76c3e77a]" started-at="2021-11-15T17:20:18 IST" name="createOppurtunityWithSalesStageCloseWon" finished-at="2021-11-15T17:20:27 IST" duration-ms="9344" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createOppurtunityWithSalesStageCloseWon -->
-        <test-method is-config="true" signature="logout()[pri:0, instance:CreateOpportunitywithSalesStageId.CreateOpportunitywithSalesStageClosedWonTest@76c3e77a]" started-at="2021-11-15T17:20:27 IST" name="logout" finished-at="2021-11-15T17:20:31 IST" duration-ms="4318" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logout -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:CreateOpportunitywithSalesStageId.CreateOpportunitywithSalesStageClosedWonTest@76c3e77a]" started-at="2021-11-15T17:20:31 IST" name="closeBrowser" finished-at="2021-11-15T17:20:34 IST" duration-ms="2190" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="disconnectDB()[pri:0, instance:CreateOpportunitywithSalesStageId.CreateOpportunitywithSalesStageClosedWonTest@76c3e77a]" started-at="2021-11-15T17:20:34 IST" name="disconnectDB" finished-at="2021-11-15T17:20:34 IST" duration-ms="0" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- disconnectDB -->
-      </class> <!-- CreateOpportunitywithSalesStageId.CreateOpportunitywithSalesStageClosedWonTest -->
+        </test-method> <!-- alphaNumericAddition -->
+      </class> <!-- akhilPack.AlphaNumeric_NumAddition -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

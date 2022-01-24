@@ -33,9 +33,9 @@ public class IccMatchTest {
 			
 			if (teamList.equalsIgnoreCase(teamINDIA)) 
 			{
-				String a = driver.findElement(By.xpath("//span[text()='"+teamINDIA+"']//ancestor::table[@class='table']//descendant::td[@class='table-body__cell u-text-right rating']")).getText();
+				String rating = driver.findElement(By.xpath("//span[text()='"+teamINDIA+"']//ancestor::table[@class='table']//descendant::td[@class='table-body__cell u-text-right rating']")).getText();
 			Thread.sleep(3000);
-				System.out.println(teamINDIA+"====>"+a);
+				System.out.println(teamINDIA+"====>"+rating);
 				break;
 			}
 		}
