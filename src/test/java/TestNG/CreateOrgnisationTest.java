@@ -2,6 +2,9 @@ package TestNG;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.Reporter;
 import org.testng.annotations.Test;
@@ -30,6 +33,9 @@ public class CreateOrgnisationTest extends BaseClass {
 	System.out.println(OrganisationInfo);
 	Assert.assertTrue(OrganisationInfo.contains(OrgName));
 	Reporter.log("Verification got passed");
+	
+	WebDriverWait wait=new WebDriverWait(driver, 30);
+	wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(OrganisationInfo)));
 			
 	}
 

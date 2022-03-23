@@ -4,3 +4,6 @@
 2021-12-30 15:34:58,441  INFO [main] BaseClassLog4j:61 - logout from application
 2021-12-30 15:35:03,632  INFO [main] BaseClassLog4j:70 - closing the browser
 2021-12-30 15:35:06,158  INFO [main] BaseClassLog4j:77 - Disconnecting to Database
+2022-03-11 11:50:11,249  INFO [main] BaseClassLog4j:28 - connecting to Database
+2022-03-11 11:50:11,282  INFO [main] BaseClassLog4j:34 - opening browser
+2022-03-11 11:50:18,108  INFO [main] BaseClassLog4j:77 - Disconnecting to Database

@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 public class DataProviderTest {
 	
 	@DataProvider
-	public Object[][] sendData(){
+	public static Object[][] sendData(){
 		Object[][] ob = new Object[3][2];
 		
 		ob[0][0]="Accnt_1";

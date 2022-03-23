@@ -24,10 +24,9 @@ public class ExtentReportCreate {
 	public void setupExtent() {
 		String dirPath = System.getProperty("user.dir");
 		String extentPath = dirPath + "/SDET2Extent.html";
-
+		
 		System.setProperty("webdriver.chrome.driver", "./drivers/chromeDriver.exe");
 		driver = new ChromeDriver();
-
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 		reporter = new ExtentHtmlReporter(extentPath);

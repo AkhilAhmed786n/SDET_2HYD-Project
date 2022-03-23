@@ -10,6 +10,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import vtigerUtilPack.BaseClass;
@@ -35,7 +36,7 @@ public class OrganisationModuleTest extends BaseClass{
 		System.out.println("hero");
 		
 	}
-
+	@Parameters("browser")
 	@Test(groups="SanityTest")
 	public void OrgWithIndustry() throws Throwable 
 	{

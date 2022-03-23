@@ -3,17 +3,18 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="log4j.LoginTestLOG">
+      <class name="practiceTestng.Class1">
         <methods>
-          <include name="loginTestlog"/>
+          <include name="class1"/>
           <include name="disconnectDB"/>
           <include name="logout"/>
           <include name="closeBrowser"/>
           <include name="connectDB"/>
           <include name="openBrowser"/>
           <include name="login"/>
+          <include name="class01"/>
         </methods>
-      </class> <!-- log4j.LoginTestLOG -->
+      </class> <!-- practiceTestng.Class1 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

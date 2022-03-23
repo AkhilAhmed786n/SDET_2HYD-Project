@@ -9,7 +9,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class Login {
 
-	//	1. create separte java class for every page in a application &
+//	1. create separate java class for every page in a application &
 //	        class name should be same page name
 
 //	4. For Every POM class  create Constructor to get an Object of the class & 
@@ -21,20 +21,20 @@ public class Login {
 		PageFactory.initElements(driver, this);
 	}
 
-	//	2. Identify all the elements using @findBy & @findAll , @FindBys annotations & 
+//	2. Identify all the elements using @findBy & @findAll , @FindBys annotations & 
 //	        store them in specific POM / java class (Element declaration)
 	
 //	4. Declare all the WebElements as private & provide getters methods to accesses elements
 //	in testScripts class [this processes is called Encapsulation]
 
-	//	@FindBy(name="user_name") 
-	//	private WebElement usernameTxtFld;
+//		@FindBy(name="user_name") 
+//		private WebElement usernameTxtFld;
 
 	@FindAll({@FindBy(name="user_name"),@FindBy(xpath="//input[@type='text']")})
 	private WebElement usernameTxtFld;
 
-	//	@FindBy(name="user_password")
-	//	private WebElement passwordTxtFld;
+//		@FindBy(name="user_password")
+//		private WebElement passwordTxtFld;
 
 	@FindBys({@FindBy(name="user_password"),@FindBy(xpath="//input[@type='password']\"")})
 	private WebElement passwordTxtFld;

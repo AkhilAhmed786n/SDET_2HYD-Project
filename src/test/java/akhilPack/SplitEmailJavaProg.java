@@ -22,13 +22,13 @@ public class SplitEmailJavaProg {
 			spcl.append(str.charAt(i));
 		
 		}
-//		System.out.println(sb);
-//		System.out.println(num);
-//		System.out.println(spcl);
+		System.out.println(sb);
+		System.out.println(num);
+		System.out.println(spcl);
 		
 		StringBuffer sa=new StringBuffer(str);
 		StringBuffer a = sa.reverse();
-		System.out.println(a);
+		System.out.println("Reverse of string is "+a);
 
 }
 }

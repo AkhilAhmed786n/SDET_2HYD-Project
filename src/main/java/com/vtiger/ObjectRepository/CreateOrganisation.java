@@ -58,12 +58,4 @@ public class CreateOrganisation extends WebDriverUtility {
 		saveBtn.click();
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-
 }
