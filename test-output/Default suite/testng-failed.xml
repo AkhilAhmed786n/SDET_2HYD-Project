@@ -3,18 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="practiceTestng.Class1">
+      <class name="practicePack.ParallelBrowser1Test">
         <methods>
-          <include name="class1"/>
-          <include name="disconnectDB"/>
-          <include name="logout"/>
-          <include name="closeBrowser"/>
+          <include name="parallelBrowser1Test"/>
           <include name="connectDB"/>
+          <include name="closeBrowser"/>
+          <include name="disconnectDB"/>
           <include name="openBrowser"/>
-          <include name="login"/>
-          <include name="class01"/>
         </methods>
-      </class> <!-- practiceTestng.Class1 -->
+      </class> <!-- practicePack.ParallelBrowser1Test -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
